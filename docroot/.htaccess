@@ -1,0 +1,31 @@
+SetEnv APP_ENV production
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+<IfModule mod_php5.c>
+    php_value include_path ".:/usr/lib/php:/usr/lib/php/ZendFramework/library/"
+    php_value error_log /var/log/php/php.log
+    php_value error_reporting 6135
+    php_value output_handler mb_output_handler
+    php_value default_charset UTF-8
+    php_value mbstring.language japanese
+    #php_value mbstring.encoding_translation Off
+    php_value mbstring.script_encoding auto
+    php_value mbstring.internal_encoding UTF-8
+    php_value mbstring.http_input auto
+    php_value mbstring.http_output UTF-8
+    #php_flag output_buffering Off
+    php_flag magic_quotes_runtime Off
+    #php_value session.save_path /Users/ou/Sites/kkapp.dev/var/session
+    php_value upload_tmp_dir /tmp
+    php_value upload_max_filesize 100M
+    php_value post_max_size 100M
+    php_value session.gc_maxlifetime 86400
+    #php_value session_cache_limiter "private"
+    php_value allow_call_time_pass_reference on
+    php_value short_open_tag on
+</IfModule>
