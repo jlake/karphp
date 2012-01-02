@@ -504,7 +504,7 @@ abstract class Connection
 	 * Returns an array mapping of native database types
 	 */
 
-	abstract public function native_database_types();
+	abstract public function native_datacore_types();
 
 	/**
 	 * Specifies whether or not adapter can use LIMIT/ORDER clauses with DELETE & UPDATE operations

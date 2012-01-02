@@ -22,6 +22,7 @@ defined('FQDN')
 
 set_include_path(implode(PATH_SEPARATOR, array(
     APP_ROOT.'/lib',
+    APP_ROOT.'/app',
     get_include_path()
 )));
 
@@ -60,7 +61,7 @@ class k_ErrorResponse extends k_BaseResponse {
 }
 
 ActiveRecord\Config::initialize(function($cfg) {
-    $cfg->set_model_directory(APP_ROOT.'/models');
+    $cfg->set_model_directory(APP_ROOT.'/app/models');
     $cfg->set_connections(array(
         'development' => 'mysql://mysql:mysql@localhost/dummy',
         'production' => 'mysql://mysql:mysql@localhost/dummy',

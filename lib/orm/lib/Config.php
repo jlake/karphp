@@ -88,7 +88,7 @@ class Config extends Singleton
 	 * ActiveRecord\Config::initialize(function($cfg) {
 	 *   $cfg->set_model_directory('/path/to/your/model_directory');
 	 *   $cfg->set_connections(array(
-	 *     'development' => 'mysql://username:password@127.0.0.1/database_name'));
+	 *     'development' => 'mysql://username:password@127.0.0.1/datacore_name'));
 	 * });
 	 * </code>
 	 *
@@ -98,7 +98,7 @@ class Config extends Singleton
 	 * $cfg = ActiveRecord\Config::instance();
 	 * $cfg->set_model_directory('/path/to/your/model_directory');
 	 * $cfg->set_connections(array('development' =>
-  	 *   'mysql://username:password@localhost/database_name'));
+  	 *   'mysql://username:password@localhost/datacore_name'));
 	 * </code>
 	 *
 	 * @param Closure $initializer A closure
@@ -114,7 +114,7 @@ class Config extends Singleton
 	 *
 	 * <code>
 	 * $config->set_connections(array(
-	 *     'development' => 'mysql://username:password@127.0.0.1/database_name'));
+	 *     'development' => 'mysql://username:password@127.0.0.1/datacore_name'));
 	 * </code>
 	 *
 	 * @param array $connections Array of connections

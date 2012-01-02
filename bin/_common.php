@@ -16,6 +16,7 @@ defined('APP_LOGDIR')
 
 set_include_path(implode(PATH_SEPARATOR, array(
     APP_ROOT.'/lib',
+    APP_ROOT.'/app',
     get_include_path()
 )));
 

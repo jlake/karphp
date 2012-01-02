@@ -24,7 +24,7 @@ class Batch_Sample
             //TO-DO
         } catch(Exception $e) {
             $errMsg = $e->getMessage();
-            app_Log::log($errMsg, mylib_Logger::ERR);
+            core_Log::log($errMsg, mylib_Logger::ERR);
         }
     }
 }
