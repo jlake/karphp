@@ -20,7 +20,7 @@ RewriteRule ^(.*)$ index.php [QSA,L]
     php_value mbstring.http_output UTF-8
     #php_flag output_buffering Off
     php_flag magic_quotes_runtime Off
-    #php_value session.save_path /Users/ou/Sites/kkapp.dev/var/session
+    #php_value session.save_path /Users/ou/github/karphp/var/session
     php_value upload_tmp_dir /tmp
     php_value upload_max_filesize 100M
     php_value post_max_size 100M
