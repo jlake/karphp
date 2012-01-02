@@ -85,7 +85,7 @@ class SqliteAdapter extends Connection
 
 	public function accepts_limit_and_order_for_update_and_delete() { return true; }
 
-	public function native_datacore_types()
+	public function native_database_types()
 	{
 		return array(
 			'primary_key' => 'INTEGER NOT NULL PRIMARY KEY',

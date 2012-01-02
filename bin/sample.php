@@ -10,18 +10,23 @@ require_once '_common.php';
 class Batch_Sample
 {
     /*
-     * 初期化
+     * コンストラクタ
      */
-    protected function _contruct() {
+    public function __construct()
+    {
     }
 
 
     /**
      * バッチ実行メッソド
      */
-    public function run() {
+    public function run()
+    {
         try {
             //TO-DO
+            $dummy = Dummy::find(1);
+            echo $dummy->inf1;
+            echo "\n";
         } catch(Exception $e) {
             $errMsg = $e->getMessage();
             core_Log::log($errMsg, mylib_Logger::ERR);

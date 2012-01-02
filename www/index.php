@@ -1,5 +1,8 @@
 <?php
+session_start();
+
 require_once '../etc/global.inc.php';
+require_once '../etc/k_response.inc.php';
 
 k()->setComponentCreator(new k_DefaultComponentCreator())
   // Enable file logging

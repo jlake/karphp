@@ -126,7 +126,7 @@ class OciAdapter extends Connection
 		// is handled in the constructor
 	}
 
-	public function native_datacore_types()
+	public function native_database_types()
 	{
 		return array(
 			'primary_key' => "NUMBER(38) NOT NULL PRIMARY KEY",

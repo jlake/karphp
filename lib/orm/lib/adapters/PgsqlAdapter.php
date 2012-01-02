@@ -109,7 +109,7 @@ SQL;
 		$this->query("SET NAMES '$charset'");
 	}
 
-	public function native_datacore_types()
+	public function native_database_types()
 	{
 		return array(
 			'primary_key' => 'serial primary key',
