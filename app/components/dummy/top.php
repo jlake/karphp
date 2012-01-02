@@ -8,8 +8,6 @@ class components_dummy_Top extends k_Component {
                 return 'components_dummy_List';
             case 'detail':
                 return 'components_dummy_Detail';
-            case 'info':
-                return 'components_dummy_Info';
             case 'test':
                 return 'components_dummy_Test';
             default:

@@ -1,13 +1,13 @@
 <?php
 class components_Root extends k_Component {
     protected $_layout = 'templates/layout_default.tpl.php';
+    protected $_active = '';
 
     protected function map($name) {
+        $this->_active = $name;
         switch ($name) {
             case 'user':
                 return 'components_user_Top';
-            case 'play':
-                return 'components_play_Top';
             case 'dummy':
                 return 'components_dummy_Top';
         }
@@ -28,6 +28,7 @@ class components_Root extends k_Component {
                 'scripts' => $this->document->scripts(),
                 'styles' => $this->document->styles(),
                 'onload' => $this->document->onload(),
+                'active' => $this->_active,
                 'userInfo' => core_Session::getUserInfo()
             )
         );
