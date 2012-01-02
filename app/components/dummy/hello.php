@@ -4,7 +4,7 @@ class components_dummy_Hello extends k_Component {
     private $_error = '';
 
     function execute() {
-        core_Log::log('log message from components_dummy_Hello', mylib_Logger::INFO);
+        core_Logger::log('log message from components_dummy_Hello', mylib_Logger::INFO);
         $cache = new mylib_Filecache( APP_CACHEDIR );
         $key = 'cache_test';
         $dateTime = '';

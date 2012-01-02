@@ -22,15 +22,16 @@ class Batch_Sample
      */
     public function run()
     {
+        batch_log('# batch start: ' .__FILE__, mylib_Logger::INFO);
         try {
-            //TO-DO
             $dummy = Dummy::find(1);
             echo $dummy->inf1;
             echo "\n";
         } catch(Exception $e) {
             $errMsg = $e->getMessage();
-            core_Log::log($errMsg, mylib_Logger::ERR);
+            batch_log($errMsg, mylib_Logger::ERR);
         }
+        batch_log('# batch end: ' .__FILE__, mylib_Logger::INFO);
     }
 }
 

@@ -130,7 +130,7 @@ class core_Session
     public static function checkLogin($context)
     {
         $userInfo = self::getUserInfo();
-        //core_Log::log("checkLogin userInfo=".print_r($userInfo, 1), mylib_Logger::DEBUG);
+        //core_Logger::log("checkLogin userInfo=".print_r($userInfo, 1), mylib_Logger::DEBUG);
         if(empty($userInfo)) {
             /*
             if(isset($_SERVER['HTTP_REFERER'])) {

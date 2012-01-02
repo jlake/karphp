@@ -1,7 +1,7 @@
 <?php
 class components_dummy_Test extends k_Component {
     function render() {
-        core_Log::log('components_dummy_Test');
+        core_Logger::log('components_dummy_Test');
         $dummy = Dummy::find(1);
         $data = array(
             'id' => $dummy->id,
