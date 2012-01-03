@@ -22,7 +22,7 @@ class components_dummy_Top extends k_Component {
     }
 
     function renderHtml() {
-        $t = new k_Template("templates/dummy/top.tpl.php");
+        $t = new k_Template("views/dummy/top.tpl.php");
         return $t->render($this);
     }
 }

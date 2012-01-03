@@ -13,7 +13,7 @@ class components_dummy_Detail extends k_Component {
     }
 
     function renderHtml() {
-        $t = new k_Template("templates/dummy/detail.tpl.php");
+        $t = new k_Template("views/dummy/detail.tpl.php");
         return $t->render($this, array(
             'detail' => $this->_detail,
         ));

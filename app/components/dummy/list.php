@@ -69,7 +69,7 @@ class components_dummy_List extends k_Component {
     }
 
     function renderHtml() {
-        $t = new k_Template("templates/dummy/list.tpl.php");
+        $t = new k_Template("views/dummy/list.tpl.php");
         return $t->render($this, array(
             'baseUrl' => $this->_baseUrl,
             'page' => $this->_page,

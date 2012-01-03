@@ -29,7 +29,7 @@ spl_autoload_register('k_autoload');
 date_default_timezone_set('Asia/Tokyo');
 
 ActiveRecord\Config::initialize(function($cfg) {
-    $cfg->set_model_directory(APP_ROOT.'/app/models');
+    $cfg->set_model_directory(APP_ROOT.'/app/models/orm');
     $cfg->set_connections(array(
         'development' => 'mysql://mysql:mysql@localhost/dummy',
         'production' => 'mysql://mysql:mysql@localhost/dummy',

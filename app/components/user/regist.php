@@ -22,7 +22,7 @@ class components_user_Regist extends k_Component {
     }
 
     function renderHtml() {
-        $t = new k_Template('templates/user/regist.tpl.php');
+        $t = new k_Template('views/user/regist.tpl.php');
         return $t->render($this, array(
             'userInfo' => $this->_userInfo
         ));

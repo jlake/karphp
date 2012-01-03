@@ -23,7 +23,7 @@ class components_dummy_Hello extends k_Component {
     }
 
     function renderHtml() {
-        $t = new k_Template("templates/dummy/hello.tpl.php");
+        $t = new k_Template("views/dummy/hello.tpl.php");
         $test = core_Session::get('test');
         //$test = $this->session()->get('test');
         return $t->render($this, array(

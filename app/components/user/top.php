@@ -15,7 +15,7 @@ class components_user_Top extends k_Component {
     }
 
     function renderHtml() {
-        $t = new k_Template("templates/user/top.tpl.php");
+        $t = new k_Template("views/user/top.tpl.php");
         return $t->render($this);
     }
 }

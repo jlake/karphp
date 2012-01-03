@@ -1,6 +1,6 @@
 <?php
 class components_Root extends k_Component {
-    protected $_layout = 'templates/layout_default.tpl.php';
+    protected $_layout = 'views/layout_default.tpl.php';
     protected $_active = '';
 
     protected function map($name) {
@@ -35,7 +35,7 @@ class components_Root extends k_Component {
     }
 
     function renderHtml() {
-        $t = new k_Template("templates/root.tpl.php");
+        $t = new k_Template("views/root.tpl.php");
         return $t->render($this);
     }
 }
