@@ -8,8 +8,8 @@ CREATE TABLE `users` (
 	`email`	varchar(128),
 	`memo` varchar(256),
 	`avail_flg`	tinyint NOT NULL DEFAULT 1,
-    `created_at` datetime DEFAULT NULL,
-    `updated_at` datetime DEFAULT NULL,
+	`created_at` datetime DEFAULT NULL,
+	`updated_at` datetime DEFAULT NULL,
 	PRIMARY KEY(`id`)
 );
 
@@ -18,11 +18,11 @@ CREATE TABLE `users` (
 */
 DROP TABLE IF EXISTS `posts`;
 CREATE TABLE `posts` (
-    `id` int(11) NOT NULL AUTO_INCREMENT,
-    `title` varchar(255) DEFAULT NULL,
-    `excerpt` text,
-    `content` text,
-    `created_at` datetime DEFAULT NULL,
-    `updated_at` datetime DEFAULT NULL,
-    PRIMARY KEY (`id`)
+	`id` int(11) NOT NULL AUTO_INCREMENT,
+	`title` varchar(255) DEFAULT NULL,
+	`introduction` text,
+	`content` text,
+	`created_at` datetime DEFAULT NULL,
+	`updated_at` datetime DEFAULT NULL,
+	PRIMARY KEY (`id`)
 );

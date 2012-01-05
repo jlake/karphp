@@ -31,8 +31,9 @@ date_default_timezone_set('Asia/Tokyo');
 ActiveRecord\Config::initialize(function($cfg) {
     $cfg->set_model_directory(APP_ROOT.'/app/models/orm');
     $cfg->set_connections(array(
-        'development' => 'mysql://mysql:mysql@localhost/dummy',
-        'production' => 'mysql://mysql:mysql@localhost/dummy',
+        'development' => 'mysql://karuser:karpass@localhost/karphp;charset=utf8',
+        'production' => 'mysql://karuser:karpass@localhost/karphp;charset=utf8',
     ));
     $cfg->set_default_connection(APP_ENV);
 });
+ActiveRecord\DateTime::$DEFAULT_FORMAT = 'Y-m-d H:i:s';
