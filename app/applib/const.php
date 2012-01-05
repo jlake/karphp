@@ -3,7 +3,7 @@
  * グローバル定数
  * @author ou
  */
-class core_Const
+class applib_Const
 {
     const APP_NAME = 'Konstrukt + ActiveRecord Application';
 }

@@ -3,7 +3,7 @@
  * App内共通関数
  * @author ou
  */
-class core_Helper
+class applib_Helper
 {
     /**
      * ヘッダからリモートIPアドレスの取得

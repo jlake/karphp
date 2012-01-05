@@ -19,7 +19,7 @@ class components_Root extends k_Component {
 
     function wrapHtml($content) {
         $t = new k_Template($this->_layout);
-        $this->document->setTitle(core_Const::APP_NAME);
+        $this->document->setTitle(applib_Const::APP_NAME);
         return $t->render(
             $this,
             array(
@@ -29,7 +29,7 @@ class components_Root extends k_Component {
                 'styles' => $this->document->styles(),
                 'onload' => $this->document->onload(),
                 'active' => $this->_active,
-                'userInfo' => core_Session::getUserInfo()
+                'userInfo' => applib_Session::getUserInfo()
             )
         );
     }

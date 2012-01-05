@@ -16,7 +16,7 @@ class components_dummy_Top extends k_Component {
     }
 
     function execute() {
-        core_Session::set('test', array('msg' => 'セッションテスト1です'));
+        applib_Session::set('test', array('msg' => 'セッションテスト1です'));
         //$this->session()->set('test', array('msg' => 'セッションテスト2です'));
         return parent::execute();
     }

@@ -31,7 +31,7 @@ class components_dummy_List extends k_Component {
         $options = array();
         if(!empty($this->_filter)) {
             $filter = json_decode($this->_filter);
-            $options['conditions'] = core_Helper::getConditions($filter);
+            $options['conditions'] = applib_Helper::getConditions($filter);
         }
 
         $this->_totalItemCount = Dummy::count($options);

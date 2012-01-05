@@ -13,5 +13,5 @@ require_once '../etc/global.inc.php';
 function batch_log($msg, $level=mylib_Logger::INFO)
 {
   $logFile = 'batch_' . date('Ymd') . '.log';
-  core_Logger::log($msg, $level, $logFile);
+  applib_Logger::log($msg, $level, $logFile);
 }

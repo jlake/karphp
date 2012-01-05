@@ -3,7 +3,7 @@
  * メッセージ共通関数
  * @author ou
  */
-class core_Message
+class applib_Message
 {
     public static $msgList = array(
         'E000' => 'パラメータ不正。',

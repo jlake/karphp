@@ -3,7 +3,7 @@
  * アプリケーション設定
  * @author ou
  */
-class core_Config
+class applib_Config
 {
     public static function get($id)
     {

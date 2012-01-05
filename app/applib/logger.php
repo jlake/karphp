@@ -3,7 +3,7 @@
  * ログ機能
  * @author ou
  */
-class core_Logger
+class applib_Logger
 {
     protected static $_logger = NULL;
 
@@ -15,7 +15,7 @@ class core_Logger
      */
     public static function setLogger($logFile = '')
     {
-        $logConfig = core_Config::get('log');
+        $logConfig = applib_Config::get('log');
         $logLevel = (!empty($logConfig) && isset($logConfig['level'])) ? $logConfig['level'] : mylib_Logger::DEBUG;
         self::$_logger = new mylib_Logger(APP_LOGDIR, $logLevel, $logFile);
    }

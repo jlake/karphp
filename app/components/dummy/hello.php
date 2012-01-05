@@ -4,7 +4,7 @@ class components_dummy_Hello extends k_Component {
     private $_error = '';
 
     function execute() {
-        core_Logger::log('log message from components_dummy_Hello', mylib_Logger::INFO);
+        applib_Logger::log('log message from components_dummy_Hello', mylib_Logger::INFO);
         $cache = new mylib_Filecache( APP_CACHEDIR );
         $key = 'cache_test';
         $dateTime = '';
@@ -24,7 +24,7 @@ class components_dummy_Hello extends k_Component {
 
     function renderHtml() {
         $t = new k_Template("views/dummy/hello.tpl.php");
-        $test = core_Session::get('test');
+        $test = applib_Session::get('test');
         //$test = $this->session()->get('test');
         return $t->render($this, array(
             'msg' => $this->_msg . ' isMobile: ' . (mylib_UserAgent::isMobile() ? 'true' : 'false'),
