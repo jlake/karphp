@@ -1,7 +1,7 @@
 <h1>Dummyデータ一覧</h1>
 <br />
 <?php include(realpath(dirname(__FILE__).'/../paginator.tpl.php')); ?>
-<table>
+<table class="zebra-striped">
 <tr>
     <th>ID</th>
     <th>カラム1</th>

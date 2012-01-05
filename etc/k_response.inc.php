@@ -20,9 +20,9 @@ class k_ErrorResponse extends k_BaseResponse {
         return 'text/html';
     }
     function toContentType($content_type) {
-        return '<div class="errortitle">エラー</div>'
-            . '<div class="textblock">'
-            . $this->content
+        return '<div class="alert-message block-message error">'
+            . '<h2>エラー</h2>'
+            . '<p>'. $this->content.'</p>'
             . '</div>';
     }
 }
