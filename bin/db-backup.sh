@@ -10,4 +10,4 @@ mkdir -p $BACKDIR
 WEEKDAY=`date +'%w'`
 
 # データベースごとにバックアップ
-mysqldump -u mysql -pmysql dummy | gzip > $BACKDIR/dummy.sql.$WEEKDAY.gz
+mysqldump -u karuser -pkarpass karphp | gzip > $BACKDIR/karphp.sql.$WEEKDAY.gz
