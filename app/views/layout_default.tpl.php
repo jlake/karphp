@@ -16,6 +16,7 @@
     <style type="text/css">
       body {
         padding-top: 60px;
+        padding-bottom: 40px;
       }
     </style>
 <?php foreach ($styles as $style): ?>
@@ -32,28 +33,52 @@
   </head>
 
   <body>
-
-    <div class="topbar">
-      <div class="fill">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="/">My Project</a>
-          <ul class="nav">
-            <li<?php if(empty($active)) { ?> class="active"<?php } ?>><a href="/">Home</a></li>
-            <li<?php if($active == 'dummy') { ?> class="active"<?php } ?>><a href="/dummy">Dummy</a></li>
-            <li<?php if($active == 'about') { ?> class="active"<?php } ?>><a href="#about">About</a></li>
-            <li<?php if($active == 'contact') { ?> class="active"<?php } ?>><a href="#contact">Contact</a></li>
-          </ul>
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">KarPHP</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+                <li<?php if(empty($active)) { ?> class="active"<?php } ?>><a href="/">Home</a></li>
+                <li<?php if($active == 'dummy') { ?> class="active"<?php } ?>><a href="/dummy">Dummy</a></li>
+                <li<?php if($active == 'about') { ?> class="active"<?php } ?>><a href="#about">About</a></li>
+                <li<?php if($active == 'contact') { ?> class="active"<?php } ?>><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
     <div class="container">
       <?php echo $content; ?>
+      <hr>
       <footer>
         <p> &copy; Jlake Ou 2011</p>
       </footer>
+    </div>
 
-    </div> <!-- /container -->
+    <!-- Le javascript
+    ================================================== -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
 
   </body>
 </html>

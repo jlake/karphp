@@ -1,6 +1,6 @@
 <h1>Dummyデータ詳細</h1>
 <br />
-<table>
+<table class="table table-bordered table-striped">
 <tr>
     <th align="right">ID: </th>
     <td><?php e($detail->id) ?></td>
