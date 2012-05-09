@@ -5,24 +5,30 @@
  */
 class applib_Config
 {
-    public static function get($id)
+    public static $config;
+
+    public static function init()
     {
         // 本番(default)
-        $configs = array(
+        self::$config = array(
             'log' => array(
                 'level' => mylib_Logger::INFO,
             ),
         );
         // 開発環境
         if(APP_ENV == 'development') {
-            $configs['log'] = array(
+            self::$config['log'] = array(
                 'level' => mylib_Logger::DEBUG,
             );
         }
-        if(isset($configs[$id])) {
-            return $configs[$id];
+    }
+
+    public static function get($id)
+    {
+        if(empty(self::$config)) {
+            self::init();
         }
-        return array();
+        return isset(self::$config[$id]) ? self::$config[$id] : null;
     }
 }
 
