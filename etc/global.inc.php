@@ -31,8 +31,8 @@ date_default_timezone_set('Asia/Tokyo');
 ActiveRecord\Config::initialize(function($cfg) {
     $cfg->set_model_directory(APP_ROOT.'/app/models/orm');
     $cfg->set_connections(array(
-        'development' => 'mysql://karuser:karpass@localhost/karphp;charset=utf8',
-        'production' => 'mysql://karuser:karpass@localhost/karphp;charset=utf8',
+        'development' => applib_Config::get('dsn', 'development'),
+        'production' => applib_Config::get('dsn', 'production'),
     ));
     $cfg->set_default_connection(APP_ENV);
 });
