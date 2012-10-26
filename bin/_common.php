@@ -1,7 +1,7 @@
 <?php
 ini_set('max_execution_time', '0');
 
-require_once '../etc/global.inc.php';
+require_once __DIR__.'/../etc/global.inc.php';
 
 /**
  * バッチログ出力

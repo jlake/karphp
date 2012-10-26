@@ -15,7 +15,7 @@
 </tr>
 <tr>
     <th align="right">変更日時: </th>
-    <td><?php e($detail->set_date) ?></td>
+    <td><?php e($detail->updated_at) ?></td>
 </tr>
 <tr>
     <th align="right">変更者: </th>

@@ -13,11 +13,14 @@
 <?php foreach ($pageItems as $item) { ?>
 <tr>
     <td><?php e($item->id) ?></td>
-    <td><?php e($item->inf1) ?></td>
+    <td><a href="<?php e(url('../detail', array('id' => $item->id))); ?>"><?php e($item->inf1) ?></a></td>
     <td><?php e($item->inf2) ?></td>
-    <td><?php e($item->set_date) ?></td>
+    <td><?php e($item->updated_at) ?></td>
     <td><?php e($item->set_nm) ?></td>
-    <td><a href="<?php e(url('../detail', array('id' => $item->id))); ?>">詳細</a></td>
+    <td>
+    	<a href="<?php e(url('../edit', array('id' => $item->id))); ?>">編集</a>
+    	<a href="<?php e(url('../delete', array('id' => $item->id))); ?>">削除</a>
+    </td>
 </tr>
 <?php } ?>
 </table>

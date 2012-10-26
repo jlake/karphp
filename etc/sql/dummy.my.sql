@@ -1,48 +1,109 @@
-/*
--- dummy テーブル
-*/
-DROP TABLE IF EXISTS dummy;
-CREATE TABLE dummy (
-	id 					MEDIUMINT NOT NULL AUTO_INCREMENT,
-	inf1				VARCHAR(64),
-	inf2				VARCHAR(64),
-	set_date			TIMESTAMP,
-	set_nm				VARCHAR(64) DEFAULT 'system',
-	create_date			DATETIME,
-	PRIMARY KEY(id)
-);
+DROP TABLE IF EXISTS `dummy`;
+CREATE TABLE IF NOT EXISTS `dummy` (
+  `id` mediumint(9) NOT NULL AUTO_INCREMENT,
+  `inf1` varchar(64) DEFAULT NULL,
+  `inf2` varchar(64) DEFAULT NULL,
+  `set_nm` varchar(64) DEFAULT 'system',
+  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
-/*
-テスト用ダミーデータ
-*/
-DELETE FROM dummy;
-INSERT INTO dummy(
-		id, inf1, inf2, set_nm, create_date
-	) VALUES (
-		NULL, '1行1番', '1行2番', 'ou', CURRENT_TIMESTAMP
-	);    
-
-INSERT INTO dummy(
-		id, inf1, inf2, set_nm, create_date
-	) VALUES (
-		NULL, '2行1番', '2行2番', 'ou', CURRENT_TIMESTAMP
-	);    
-
-INSERT INTO dummy(
-		id, inf1, inf2, set_nm, create_date
-	) VALUES (
-		NULL, '3行1番', '3行2番', 'ou', CURRENT_TIMESTAMP
-	);    
-
-INSERT INTO dummy(
-		id, inf1, inf2, set_nm, create_date
-	) VALUES (
-		NULL, '4行1番', '4行2番', 'ou', CURRENT_TIMESTAMP
-	);    
-
-INSERT INTO dummy(
-		id, inf1, inf2, set_nm, create_date
-	) VALUES (
-		NULL, '5行1番', '5行2番', 'ou', CURRENT_TIMESTAMP
-	);    
+INSERT INTO `dummy` (`id`, `inf1`, `inf2`, `set_nm`) VALUES
+	(NULL, '1行1列', '1行2列', 'system'),
+	(NULL, '2行1列', '2行2列', 'system'),
+	(NULL, '3行1列', '3行2列', 'system'),
+	(NULL, '4行1列', '4行2列', 'system'),
+	(NULL, '5行1列', '5行2列', 'system'),
+	(NULL, '6行1列', '6行2列', 'system'),
+	(NULL, '7行1列', '7行2列', 'system'),
+	(NULL, '8行1列', '8行2列', 'system'),
+	(NULL, '11行1列', '11行2列', 'system'),
+	(NULL, '13行1列', '13行2列', 'system'),
+	(NULL, '14行1列', '14行2列', 'system'),
+	(NULL, '15行1列', '15行2列', 'system'),
+	(NULL, '16行1列', '16行2列', 'system'),
+	(NULL, '17行1列', '17行2列', 'system'),
+	(NULL, '18行1列', '18行2列', 'system'),
+	(NULL, '19行1列', '19行2列', 'system'),
+	(NULL, '20行1列', '20行2列', 'system'),
+	(NULL, '21行1列', '21行2列', 'system'),
+	(NULL, '22行1列', '22行2列', 'system'),
+	(NULL, '23行1列', '23行2列', 'system'),
+	(NULL, '24行1列', '24行2列', 'system'),
+	(NULL, '25行1列', '25行2列', 'system'),
+	(NULL, '26行1列', '26行2列', 'system'),
+	(NULL, '27行1列', '27行2列', 'system'),
+	(NULL, '28行1列', '28行2列', 'system'),
+	(NULL, '29行1列', '29行2列', 'system'),
+	(NULL, '30行1列', '30行2列', 'system'),
+	(NULL, '31行1列', '31行2列', 'system'),
+	(NULL, '32行1列', '32行2列', 'system'),
+	(NULL, '33行1列', '33行2列', 'system'),
+	(NULL, '34行1列', '34行2列', 'system'),
+	(NULL, '35行1列', '35行2列', 'system'),
+	(NULL, '36行1列', '36行2列', 'system'),
+	(NULL, '37行1列', '37行2列', 'system'),
+	(NULL, '38行1列', '38行2列', 'system'),
+	(NULL, '39行1列', '39行2列', 'system'),
+	(NULL, '40行1列', '40行2列', 'system'),
+	(NULL, '41行1列', '41行2列', 'system'),
+	(NULL, '42行1列', '42行2列', 'system'),
+	(NULL, '43行1列', '43行2列', 'system'),
+	(NULL, '44行1列', '44行2列', 'system'),
+	(NULL, '45行1列', '45行2列', 'system'),
+	(NULL, '46行1列', '46行2列', 'system'),
+	(NULL, '47行1列', '47行2列', 'system'),
+	(NULL, '48行1列', '48行2列', 'system'),
+	(NULL, '49行1列', '49行2列', 'system'),
+	(NULL, '50行1列', '50行2列', 'system'),
+	(NULL, '51行1列', '51行2列', 'system'),
+	(NULL, '52行1列', '52行2列', 'system'),
+	(NULL, '53行1列', '53行2列', 'system'),
+	(NULL, '54行1列', '54行2列', 'system'),
+	(NULL, '55行1列', '55行2列', 'system'),
+	(NULL, '56行1列', '56行2列', 'system'),
+	(NULL, '57行1列', '57行2列', 'system'),
+	(NULL, '58行1列', '58行2列', 'system'),
+	(NULL, '59行1列', '59行2列', 'system'),
+	(NULL, '60行1列', '60行2列', 'system'),
+	(NULL, '61行1列', '61行2列', 'system'),
+	(NULL, '62行1列', '62行2列', 'system'),
+	(NULL, '63行1列', '63行2列', 'system'),
+	(NULL, '64行1列', '64行2列', 'system'),
+	(NULL, '65行1列', '65行2列', 'system'),
+	(NULL, '66行1列', '66行2列', 'system'),
+	(NULL, '67行1列', '67行2列', 'system'),
+	(NULL, '68行1列', '68行2列', 'system'),
+	(NULL, '69行1列', '69行2列', 'system'),
+	(NULL, '70行1列', '70行2列', 'system'),
+	(NULL, '71行1列', '71行2列', 'system'),
+	(NULL, '72行1列', '72行2列', 'system'),
+	(NULL, '73行1列', '73行2列', 'system'),
+	(NULL, '74行1列', '74行2列', 'system'),
+	(NULL, '75行1列', '75行2列', 'system'),
+	(NULL, '76行1列', '76行2列', 'system'),
+	(NULL, '77行1列', '77行2列', 'system'),
+	(NULL, '78行1列', '78行2列', 'system'),
+	(NULL, '79行1列', '79行2列', 'system'),
+	(NULL, '80行1列', '80行2列', 'system'),
+	(NULL, '81行1列', '81行2列', 'system'),
+	(NULL, '82行1列', '82行2列', 'system'),
+	(NULL, '83行1列', '83行2列', 'system'),
+	(NULL, '84行1列', '84行2列', 'system'),
+	(NULL, '85行1列', '85行2列', 'system'),
+	(NULL, '86行1列', '86行2列', 'system'),
+	(NULL, '87行1列', '87行2列', 'system'),
+	(NULL, '88行1列', '88行2列', 'system'),
+	(NULL, '89行1列', '89行2列', 'system'),
+	(NULL, '90行1列', '90行2列', 'system'),
+	(NULL, '91行1列', '91行2列', 'system'),
+	(NULL, '92行1列', '92行2列', 'system'),
+	(NULL, '93行1列', '93行2列', 'system'),
+	(NULL, '94行1列', '94行2列', 'system'),
+	(NULL, '95行1列', '95行2列', 'system'),
+	(NULL, '96行1列', '96行2列', 'system'),
+	(NULL, '97行1列', '97行2列', 'system'),
+	(NULL, '98行1列', '98行2列', 'system'),
+	(NULL, '99行1列', '99行2列', 'system'),
+	(NULL, '100行1列', '100行2列', 'system');

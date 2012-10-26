@@ -12,7 +12,8 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css" type="text/css" />
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -33,7 +34,7 @@
   </head>
 
   <body>
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
