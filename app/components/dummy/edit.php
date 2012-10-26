@@ -23,10 +23,6 @@ class components_dummy_Edit extends k_Component {
         return new k_SeeOther($this->url('../list'));
     }
 
-    function execute() {
-        return parent::execute();
-    }
-
     function renderHtml() {
         $t = new k_Template("views/dummy/edit.tpl.php");
         return $t->render($this, array(

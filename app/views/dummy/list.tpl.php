@@ -24,4 +24,8 @@
 </tr>
 <?php } ?>
 </table>
+<div class="form-actions">
+	<a href="<?php e(url('../add')); ?>" class="btn btn-primary">追加</a>
+</div>
+
 <?php include(realpath(dirname(__FILE__).'/../paginator.tpl.php')); ?>

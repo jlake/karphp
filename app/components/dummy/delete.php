@@ -20,10 +20,6 @@ class components_dummy_Delete extends k_Component {
         return new k_SeeOther($this->url('../list'));
     }
 
-    function execute() {
-        return parent::execute();
-    }
-
     function renderHtml() {
         $t = new k_Template("views/dummy/delete.tpl.php");
         return $t->render($this, array(
