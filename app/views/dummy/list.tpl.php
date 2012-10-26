@@ -18,8 +18,8 @@
     <td><?php e($item->updated_at) ?></td>
     <td><?php e($item->set_nm) ?></td>
     <td>
-    	<a href="<?php e(url('../edit', array('id' => $item->id))); ?>">編集</a>
-    	<a href="<?php e(url('../delete', array('id' => $item->id))); ?>">削除</a>
+        <a href="<?php e(url('../edit', array('id' => $item->id))); ?>">編集</a>
+        <a href="<?php e(url('../delete', array('id' => $item->id))); ?>">削除</a>
     </td>
 </tr>
 <?php } ?>

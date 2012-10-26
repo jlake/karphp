@@ -45,7 +45,7 @@ class components_dummy_List extends k_Component {
  
         $this->_pageItems = Dummy::all($options);
 
-        $this->_pageCount = ceil($this->_totalItemCount / $options['limit']);
+        $this->_pageCount = ceil($this->_totalItemCount / self::PAGE_SIZE);
         if($this->_pageCount > self::RANGE_SIZE) {
             $halfRange = floor(self::RANGE_SIZE / 2);
             $this->_startPage = $this->_page - $halfRange + 1;
@@ -53,6 +53,10 @@ class components_dummy_List extends k_Component {
             if($this->_startPage < 1) {
                 $this->_startPage = 1;
                 $this->_endPage = self::RANGE_SIZE;
+            }
+            if($this->_endPage > $this->_pageCount) {
+                $this->_endPage = $this->_pageCount;
+                $this->_startPage = $this->_endPage - self::RANGE_SIZE + 1;
             }
         } else {
             $this->_startPage = 1;
