@@ -63,11 +63,11 @@ class mylib_Filecache {
     }
 
     /**
-     * Method to clear the cache.
+     * Method to delete the cache.
      * @param string $key
      * @return boolean
      */
-    public function clear($key) {
+    public function delete($key) {
         $this->_key = $key;
         $cacheFile = $this->_getFilePath();;
         if(file_exists($cacheFile)) {
